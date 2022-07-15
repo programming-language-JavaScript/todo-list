@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My todo list</title>
+    <link rel="stylesheet" href="./assets/css/uikit.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+<main class="main uk-align-center">
+    <div class="wrapper uk-margin-large-top">
+        <label for="$task"></label>
+        <input class="uk-input uk-form-width-medium" id="$task" type="text" placeholder="Задача">
+        <p uk-margin>
+            <button class="uk-button uk-button-default" id="btnAdd">Добавить</button>
+            <button class="uk-button uk-button-danger" id="btnDeleteAll">Удалить всё</button>
+        </p>
+        <div uk-filter="target: .js-filter">
+            <ul class="uk-subnav uk-subnav-pill center">
+                <li class="uk-active" uk-filter-control><a href="#">Все</a></li>
+                <li uk-filter-control=".check"><a href="#">Выполненные</a></li>
+                <li uk-filter-control=".not-check"><a href="#">Не выполненные</a></li>
+            </ul>
+            <div class="uk-child-width-1-4@s uk-margin-large-top uk-margin-large-left uk-margin-large-right js-filter"
+                 id="$cards"
+                 uk-grid>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="./assets/js/uikit.min.js"></script>
+<script src="./assets/js/uikit-icons.min.js"></script>
+<script src="./assets/js/script.js"></script>
+</body>
+
+</html>
